@@ -1,0 +1,2 @@
+NAME=Try
+CUDA_VISIBLE_DEVICES=4 python -u main.py --config ./cfgs/fine-tuning/scan.yaml --exp_name ${NAME} --cache_prompt --ckpts ./ckpts/ckpt-best.pth --propagate_cof 0.2 --center_cof 0.3 > ./try.log 2>&1 &
