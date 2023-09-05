@@ -6,6 +6,7 @@ Official implementation of ['Point-PEFT: Parameter-Efficient Fine-Tuning for 3D 
 <div align="center" width=60% height=60%>
   <img src="teaser.png"/>
 </div>
+
 * 📣 Extensive experiments indicate that our Point-PEFT can achieve better performance than the full fine-tuning on various downstream tasks, while using only 5% of the trainable parameters.
 
 * 📣 We release the code of Point-M2AE with Point-PEFT on ScanObjectNN.
