@@ -7,7 +7,7 @@ Official implementation of ['Point-PEFT: Parameter-Efficient Fine-Tuning for 3D 
 
 ## Introduction
 
-Comparison with existing 3D pre-trained models on the PB-T50-RS spilt of ScanObjectNN:
+Comparison with existing 3D pre-trained models on the PB-T50-RS split of ScanObjectNN:
 | Method | Parameters | PB-T50-RS|
 | :-----: | :-----: |:-----:|
 | [Point-BERT](https://github.com/lulutang0608/Point-BERT) | 22.1M | 83.1 %| 
