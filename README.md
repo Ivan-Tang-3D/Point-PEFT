@@ -37,26 +37,14 @@ We propose the Point-PEFT, a novel framework for adapting point cloud pre-traine
   <img src="pipeline.png"/>
 </div>
 
-## I2P-MAE Models
+## Point-PEFT
 
-### Pre-training
-Guided by pre-trained CLIP on ShapeNet, I2P-MAE is evaluated by **Linear SVM** on ModelNet40 and ScanObjectNN (OBJ-BG split) datasets, without downstream fine-tuning:
-| Task | Dataset | Config | MN40 Acc.| OBJ-BG Acc.| Ckpts | Logs |   
-| :-----: | :-----: |:-----:| :-----: | :-----:| :-----:|:-----:|
-| Pre-training | ShapeNet |[i2p-mae.yaml](./cfgs/pre-training/i2p-mae.yaml)| 93.35% | 87.09% | [pre-train.pth](https://drive.google.com/file/d/1TYKHdLwu9DKLgsnvsY4fpgpNowCHErFZ/view?usp=share_link) | [log](https://drive.google.com/file/d/11kkgTQoUJVLYKk1Xbo0XtQPCqh50my-G/view?usp=share_link) |
+### the result of Fine-tuning
 
-### Fine-tuning
-Synthetic shape classification on ModelNet40 with 1k points:
-| Task  | Config | Acc.| Vote| Ckpts | Logs |   
-| :-----: | :-----:| :-----:| :-----: | :-----:|:-----:|
-| Classification | [modelnet40.yaml]()|93.67%| 94.06% | [modelnet40.pth]() | [modelnet40.log]() |
-
-Real-world shape classification on ScanObjectNN:
-| Task | Split | Config | Acc.| Ckpts | Logs |   
-| :-----: | :-----:|:-----:| :-----:| :-----:|:-----:|
-| Classification | PB-T50-RS|[scan_pb.yaml]() | 90.11%| [scan_pd.pth]() | [scan_pd.log]() |
-| Classification |OBJ-BG| [scan_obj-bg.yaml]() | 94.15%| - | - |
-| Classification | OBJ-ONLY| [scan_obj.yaml]() | 91.57%| - | - |
+Real-world shape classification on the PB-T50-RS split of ScanObjectNN:
+| Method | Config | Acc.| Ckpts-result | Logs |
+| :-----: | :-----:|:-----:| :-----:| :-----:|
+| Point-M2AE-aug | [scan.yaml]() | 88.2%| [scan_m2ae_result.pth]() | [scan_m2ae.log]() |
 
 
 ## Requirements
@@ -96,7 +84,7 @@ For pre-training and fine-tuning, please follow [DATASET.md](https://github.com/
 
 The final directory structure should be:
 ```
-│I2P-MAE/
+│Point-PEFT/
 ├──cfgs/
 ├──datasets/
 ├──data/
