@@ -140,9 +140,3 @@ CUDA_VISIBLE_DEVICES=0 python main.py --config cfgs/fine-tuning/scan_obj-bg.yaml
 ## Acknowledgement
 This repo benefits from [Point-M2AE](https://github.com/ZrrSkywalker/Point-M2AE), [Point-BERT](https://github.com/lulutang0608/Point-BERT), [Point-MAE](https://github.com/Pang-Yatian/Point-MAE), and [CLIP](https://github.com/openai/CLIP). Thanks for their wonderful works.
 
-## Contact
-If you have any question about this project, please feel free to contact zhangrenrui@pjlab.org.cn.
-
-## Contact
-If you have any question about this project, please feel free to contact zhangrenrui@pjlab.org.cn.
-
