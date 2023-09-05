@@ -52,18 +52,17 @@ Real-world shape classification on the PB-T50-RS split of ScanObjectNN:
 ### Installation
 Create a conda environment and install basic dependencies:
 ```bash
-git clone https://github.com/ZrrSkywalker/I2P-MAE.git
-cd I2P-MAE
+git clone https://github.com/EvenJoker/Point-PEFT.git
+cd Point-PEFT
 
-conda create -n i2pmae python=3.7
-conda activate i2pmae
+conda create -n point-peft python=3.8
+conda activate point-peft
 
 # Install the according versions of torch and torchvision
 conda install pytorch torchvision cudatoolkit
 # e.g., conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3
 
 pip install -r requirements.txt
-pip install torch-scatter -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
 ```
 Install GPU-related packages:
 ```bash
@@ -89,32 +88,11 @@ The final directory structure should be:
 ├──datasets/
 ├──data/
 │   ├──ModelNet/
-│   ├──ModelNetFewshot/
-│   ├──modelnet40_ply_hdf5_2048/  # Specially for Linear SVM
 │   ├──ScanObjectNN/
-│   ├──ShapeNet55-34/
-│   ├──shapenetcore_partanno_segmentation_benchmark_v0_normal/
 ├──...
 ```
 
 ## Get Started
-
-### Pre-training
-I2P-MAE is pre-trained on ShapeNet dataset with the config file `cfgs/pre-training/i2p-mae.yaml`. Run:
-```bash
-CUDA_VISIBLE_DEVICES=0 python main.py --config cfgs/pre-training/i2p-mae.yaml --exp_name pre-train
-```
-
-To evaluate the pre-trained I2P-MAE by **Linear SVM**, create a folder `ckpts/` and download the [pre-train.pth]() into it. Use the configs in `cfgs/linear-svm/` and indicate the evaluation dataset by `--test_svm`.
-
-For ModelNet40, run:
-```bash
-CUDA_VISIBLE_DEVICES=0 python main.py --config cfgs/linear-svm/modelnet40.yaml --test_svm modelnet40 --exp_name test_svm --ckpts ./ckpts/pre-train.pth
-```
-For ScanObjectNN (OBJ-BG split), run:
-```bash
-CUDA_VISIBLE_DEVICES=0 python main.py --config cfgs/linear-svm/scan_obj-bg.yaml --test_svm scan --exp_name test_svm --ckpts ./ckpts/pre-train.pth
-```
 
 ### Fine-tuning
 Please create a folder `ckpts/` and download the [pre-train.pth]() into it. The fine-tuning configs are in `cfgs/fine-tuning/`.
