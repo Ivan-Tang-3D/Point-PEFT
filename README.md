@@ -42,9 +42,9 @@ We propose the Point-PEFT, a novel framework for adapting point cloud pre-traine
 ### the result of Fine-tuning
 
 Real-world shape classification on the PB-T50-RS split of ScanObjectNN:
-| Method | Config | Acc.| Ckpts-result | Logs |
-| :-----: | :-----:|:-----:| :-----:| :-----:|
-| Point-M2AE-aug | [scan.yaml]() | 88.2%| [scan_m2ae_result.pth]() | [scan_m2ae.log]() |
+| Method | Config | Acc.| Logs |
+| :-----: | :-----:|:-----:| :-----:|
+| Point-M2AE-aug | [scan.yaml]() | 88.2% | [scan_m2ae.log]() |
 
 
 ## Requirements
