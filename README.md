@@ -3,7 +3,7 @@
 Official implementation of ['Point-PEFT: Parameter-Efficient Fine-Tuning for 3D Pre-trained Models']().
 
 ## News
-* 📣 We release the code of Point-M2AE with Point-PEFT.
+* 📣 We release the code of Point-M2AE with Point-PEFT on ScanObjectNN.
 
 ## Introduction
 
