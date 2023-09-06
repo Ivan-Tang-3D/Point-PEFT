@@ -2,9 +2,8 @@
 
 Official implementation of ['Point-PEFT: Parameter-Efficient Fine-Tuning for 3D Pre-trained Models']().
 
-<div align="center" width=40% height=40%>
-  <img src="teaser.png"/>
-</div>
+<p align="center">                                                                                                                                          <img src="teaser.png"/ width="45%"> <br>
+</p>
 
 ## Introduction
 
