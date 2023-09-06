@@ -2,48 +2,41 @@
 
 Official implementation of ['Point-PEFT: Parameter-Efficient Fine-Tuning for 3D Pre-trained Models']().
 
-## News
-<div align="center" width=60% height=60%>
+<div align="center" width=40% height=40%>
   <img src="teaser.png"/>
 </div>
 
-* 📣 Extensive experiments indicate that our Point-PEFT can achieve better performance than the full fine-tuning on various downstream tasks, while using only 5% of the trainable parameters.
-
-* 📣 We release the code of Point-M2AE with Point-PEFT on ScanObjectNN.
-
 ## Introduction
 
+We propose the Point-PEFT, a novel framework for adapting point cloud pre-trained models with minimal learnable parameters. Specifically, for a pre-trained 3D model, we freeze most of its parameters, and only tune the newly added PEFT modules on downstream tasks, which consist of a Point-prior Prompt and a Geometry-aware Adapter. The Point-prior Prompt constructs a memory bank with domain-specific knowledge and utilizes a parameter-free attention for prompt enhancement. The Geometry-aware Adapter aims to aggregate point cloud features within spatial neighborhoods to capture fine-grained geometric information.
+
+<div align="center">
+  <img src="pipeline.png"/>
+</div>
+
+## Main Results
 Comparison with existing 3D pre-trained models on the PB-T50-RS split of ScanObjectNN:
 | Method | Parameters | PB-T50-RS|
 | :-----: | :-----: |:-----:|
-| [Point-BERT](https://github.com/lulutang0608/Point-BERT) | 22.1M | 83.1 %| 
+| [Point-BERT](https://github.com/lulutang0608/Point-BERT) | 22.1M | 83.1%| 
 | **+Point-PEFT** | **0.6M** | **85.0%**|
-| [Point-MAE](https://github.com/Pang-Yatian/Point-MAE) | 22.1M | 85.2%|
-| **Point-MAE-aug** | **22.1M** | **88.1%**|
+| [Point-MAE-aug](https://github.com/Pang-Yatian/Point-MAE) | 22.1M | 88.1%|
 | **+Point-PEFT** | **0.7M** | **89.1%**|
-| [Point-M2AE](https://github.com/ZrrSkywalker/Point-M2AE)| 12.9M | 86.4%|
-| **Point-M2AE-aug** | **12.9M** | **88.1%**|
+| [Point-M2AE-aug](https://github.com/ZrrSkywalker/Point-M2AE)| 12.9M | 88.1%|
 | **+Point-PEFT** | **0.7M** | **88.2%**|
 
 Comparison with existing 3D pre-trained models on the ModelNet40 without voting method:
 | Method | Parameters | Acc|
 | :-----: | :-----: |:-----:|
-| [Point-BERT](https://github.com/lulutang0608/Point-BERT) | 22.1M | 92.7 %| 
+| [Point-BERT](https://github.com/lulutang0608/Point-BERT) | 22.1M | 92.7%| 
 | **+Point-PEFT** | **0.6M** | **93.4%**|
 | [Point-MAE](https://github.com/Pang-Yatian/Point-MAE) | 22.1M | 93.2%|
 | **+Point-PEFT** | **0.8M** | **94.2%**|
 | [Point-M2AE](https://github.com/ZrrSkywalker/Point-M2AE)| 15.3M | 93.4%|
 | **+Point-PEFT** | **0.6M** | **94.1%**|
 
-We propose the Point-PEFT, a novel framework for adapting point cloud pre-trained models with minimal learnable parameters. Specifically, for a pre-trained 3D model, we freeze most of its parameters, and only tune the newly added PEFT modules on downstream tasks, which consist of a Point-prior Prompt and a Geometry-aware Adapter. The Point-prior Prompt adopts a set of learnable prompt tokens, for which we propose to construct a memory bank with domain-specific knowledge, and utilize a parameter-free attention to enhance the prompt tokens. The Geometry-aware Adapter aims to aggregate point cloud features within spatial neighborhoods to capture fine-grained geometric information through local interactions.
 
-<div align="center">
-  <img src="pipeline.png"/>
-</div>
-
-## Point-PEFT
-
-### the result of Fine-tuning
+## Ckpt Release
 
 Real-world shape classification on the PB-T50-RS split of ScanObjectNN:
 | Method | Config | Acc.| Logs |
@@ -51,7 +44,7 @@ Real-world shape classification on the PB-T50-RS split of ScanObjectNN:
 | Point-M2AE-aug | [scan.yaml]() | 88.2% | [scan_m2ae.log]() |
 
 
-## Requirements
+## Get Started
 
 ### Installation
 Create a conda environment and install basic dependencies:
@@ -82,7 +75,7 @@ pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointn
 # GPU kNN
 pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl
 ```
-### Datasets
+### Dataset
 For pre-training and fine-tuning, please follow [DATASET.md](https://github.com/lulutang0608/Point-BERT/blob/master/DATASET.md) to install ModelNet40, ScanObjectNN, and ShapeNetPart datasets, referring to Point-BERT. Specially Put the unzip folder under `data/`.
 
 The final directory structure should be:
@@ -95,8 +88,6 @@ The final directory structure should be:
 │   ├──ScanObjectNN/
 ├──...
 ```
-
-## Get Started
 
 ### Fine-tuning
 Please download the [ckpt-best.pth](), [pre-train.pth]() and [cache_shape.pt]() into the `ckpts/` folder. 
