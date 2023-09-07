@@ -40,7 +40,7 @@ Comparison with existing 3D pre-trained models on the ModelNet40 without voting 
 Real-world shape classification on the PB-T50-RS split of ScanObjectNN:
 | Method | Config | Acc.| Logs |
 | :-----: | :-----:|:-----:| :-----:|
-| Point-M2AE-aug | [scan.yaml]() | 88.2% | [scan_m2ae.log]() |
+| Point-M2AE-aug | [scan.yaml]() | 88.2% | [scan_m2ae.log](https://drive.google.com/file/d/1Dx8ucp_7_2GtSe60wq3jsbtn4xUKHqM8/view?usp=sharing) |
 
 
 ## Get Started
