@@ -40,7 +40,7 @@ Comparison with existing 3D pre-trained models on the ModelNet40 without voting 
 Real-world shape classification on the PB-T50-RS split of ScanObjectNN:
 | Method | Config | Acc.| Logs |
 | :-----: | :-----:|:-----:| :-----:|
-| Point-M2AE-aug | [scan.yaml]() | 88.2% | [scan_m2ae.log](https://drive.google.com/file/d/1Dx8ucp_7_2GtSe60wq3jsbtn4xUKHqM8/view?usp=sharing) |
+| Point-M2AE-aug | [scan.yaml](https://drive.google.com/file/d/1JzYQKMTGLmT4cQ3HNI9g8rNHFovmPMgl/view?usp=sharing) | 88.2% | [scan_m2ae.log](https://drive.google.com/file/d/1Dx8ucp_7_2GtSe60wq3jsbtn4xUKHqM8/view?usp=sharing) |
 
 
 ## Get Started
@@ -89,7 +89,7 @@ The final directory structure should be:
 ```
 
 ### Fine-tuning
-Please download the [ckpt-best.pth](), [pre-train.pth]() and [cache_shape.pt]() into the `ckpts/` folder. 
+Please download the [ckpt-best.pth](https://drive.google.com/file/d/16oJrxbLlDLMp1nA8W3EEjRA-cENReAU9/view?usp=sharing), [pre-train.pth](https://drive.google.com/file/d/1m9biTvZN098NP3IwJuTt3kWI0t-sIKSn/view?usp=sharing) and [cache_shape.pt](https://drive.google.com/file/d/1YdUlBL2QpimMBvyK3XaDcUCVxMQP1-1h/view?usp=sharing) into the `ckpts/` folder. 
 
 For the PB-T50-RS split of ScanObjectNN, run:
 ```bash
