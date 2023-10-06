@@ -1,6 +1,6 @@
 # Point-PEFT: Parameter-Efficient Fine-Tuning for 3D Pre-trained Models
 
-Official implementation of ['Point-PEFT: Parameter-Efficient Fine-Tuning for 3D Pre-trained Models']().
+Official implementation of ['Point-PEFT: Parameter-Efficient Fine-Tuning for 3D Pre-trained Models'](https://arxiv.org/abs/2310.03059).
 
 <p align="center">                                                                                                                                          <img src="teaser.png"/ width="45%"> <br>
 </p>
