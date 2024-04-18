@@ -98,6 +98,20 @@ For the PB-T50-RS split of ScanObjectNN, run:
 sh Finetune_cache_prompt_scan.sh
 ```
 
+### Citation
+If you find our paper and code useful in your research, please consider giving a star ⭐ and citation 📝.
+```bash
+@inproceedings{tang2024point,
+  title={Point-PEFT: Parameter-efficient fine-tuning for 3D pre-trained models},
+  author={Tang, Yiwen and Zhang, Ray and Guo, Zoey and Ma, Xianzheng and Zhao, Bin and Wang, Zhigang and Wang, Dong and Li, Xuelong},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={6},
+  pages={5171--5179},
+  year={2024}
+}
+```
+
 ## Acknowledgement
 This repo benefits from [Point-M2AE](https://github.com/ZrrSkywalker/Point-M2AE), [Point-BERT](https://github.com/lulutang0608/Point-BERT), [Point-MAE](https://github.com/Pang-Yatian/Point-MAE). Thanks for their wonderful works.
 
