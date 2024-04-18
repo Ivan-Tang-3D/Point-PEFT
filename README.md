@@ -5,6 +5,7 @@ Official implementation of ['Point-PEFT: Parameter-Efficient Fine-Tuning for 3D 
 The paper has been accepted by **AAAI 2024**.
 
 **[2023.7] We release ICCV2023 ['ViewRefer3D'](https://arxiv.org/pdf/2303.16894.pdf), a multi-view framework for 3D visual grounding exploring how to grasp the view knowledge from both text and 3D modalities.**
+
 **[2024.4] We release ['Any2Point'](https://arxiv.org/pdf/2404.07989.pdf), adapting Any-Modality pre-trained Models with 1% parameters to 3D downstream tasks with SOTA performance.**
 
 <p align="center">                                                                                                                                          <img src="teaser.png"/ width="45%"> <br>
