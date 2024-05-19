@@ -47,8 +47,7 @@ Real-world shape classification on the PB-T50-RS split of ScanObjectNN:
 | Method | Acc.| Logs |
 | :-----: |:-----:| :-----:|
 | Point-M2AE-aug |88.2% | [scan_m2ae.log](https://drive.google.com/file/d/1Dx8ucp_7_2GtSe60wq3jsbtn4xUKHqM8/view?usp=sharing) |
-| :-----: | :-----:| :-----:|
-| Point-MAE-aug | 88.2% | [scan_mae.log](https://drive.google.com/file/d/1WF7mnKwqrluWTOuKHXPUfkBJ8cLUEONh/view?usp=sharing) |
+| Point-MAE-aug | 89.1% | [scan_mae.log](https://drive.google.com/file/d/1WF7mnKwqrluWTOuKHXPUfkBJ8cLUEONh/view?usp=sharing) |
 
 
 ## Get Started
