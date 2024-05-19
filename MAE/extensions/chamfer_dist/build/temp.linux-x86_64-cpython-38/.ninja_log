@@ -1,0 +1,3 @@
+# ninja log v5
+1	21387	1682924692000000000	/mnt/petrelfs/guoziyu/Point-MAE/extensions/chamfer_dist/build/temp.linux-x86_64-cpython-38/chamfer_cuda.o	ae8d311ad87fbcda
+1	43117	1682924714000000000	/mnt/petrelfs/guoziyu/Point-MAE/extensions/chamfer_dist/build/temp.linux-x86_64-cpython-38/chamfer.o	683be535fec964a4
